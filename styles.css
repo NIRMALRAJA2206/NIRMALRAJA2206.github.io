@@ -112,8 +112,9 @@ body {
   margin: 0;
   color: #8aa3bb;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.76rem;
-  letter-spacing: 0.14em;
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 h1 {
