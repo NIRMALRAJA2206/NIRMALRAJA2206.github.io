@@ -1,0 +1,346 @@
+:root {
+  --bg: #090d12;
+  --bg-soft: #0d131b;
+  --panel: #101923;
+  --panel-2: #121f2b;
+  --text: #e6edf3;
+  --muted: #9cb0c3;
+  --line: #223244;
+  --accent: #3fbf8a;
+  --accent-2: #2ea170;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background:
+    radial-gradient(1200px 500px at 90% -10%, #1b2d3e 0%, transparent 55%),
+    radial-gradient(900px 500px at -20% 0%, #112233 0%, transparent 50%),
+    linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 52%, #0b1017 100%);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: radial-gradient(#5d7287 0.45px, transparent 0.45px);
+  background-size: 3px 3px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  background: color-mix(in srgb, #0b1118 78%, transparent);
+}
+
+.topbar-inner {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.menu {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.84rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.34rem 0.75rem;
+  transition: all 180ms ease;
+}
+
+.menu a:hover {
+  color: var(--text);
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--panel-2) 78%, transparent);
+}
+
+.container {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 1.3rem auto 2.1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: linear-gradient(160deg, color-mix(in srgb, var(--panel) 96%, black), color-mix(in srgb, var(--panel-2) 90%, black));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.3rem;
+  scroll-margin-top: 84px;
+}
+
+.hero {
+  padding: 1.7rem 1.3rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #8aa3bb;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0.48rem 0 0;
+  font-size: clamp(1.62rem, 4vw, 2.95rem);
+  line-height: 1.17;
+}
+
+.summary {
+  margin: 0.84rem 0 0;
+  max-width: 78ch;
+  color: var(--muted);
+}
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.42rem 0.82rem;
+  text-decoration: none;
+  color: var(--text);
+  background: color-mix(in srgb, #162434 64%, transparent);
+  font-weight: 600;
+  font-size: 0.91rem;
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 52%, var(--line));
+  background: color-mix(in srgb, #1a3043 84%, transparent);
+}
+
+.about-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.mini-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: color-mix(in srgb, #13202c 84%, transparent);
+}
+
+.mini-card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.mini-card p {
+  margin: 0.26rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.meta {
+  margin: 0.9rem 0 0;
+  color: #89a0b5;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.inline-link {
+  color: #8ecfb2;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.86rem;
+}
+
+.links-list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.links-list li {
+  margin-bottom: 0.58rem;
+}
+
+.links-list a {
+  color: var(--text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.cards {
+  display: grid;
+  gap: 0.62rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 0.84rem;
+  background: color-mix(in srgb, #13202d 84%, transparent);
+}
+
+.card-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.card-meta {
+  margin: 0.13rem 0 0.38rem;
+  color: #8ea4b8;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+}
+
+.card p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.subhead {
+  margin: 1rem 0 0.6rem;
+  font-size: 0.95rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #8ea4b8;
+  font-weight: 500;
+}
+
+.repo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.repo-name {
+  margin: 0;
+  font-size: 1rem;
+  color: #b9f2d9;
+}
+
+.repo-desc {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.repo-meta {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.77rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #8ea4b8;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(11px);
+  animation: reveal 440ms ease forwards;
+}
+
+.reveal:nth-of-type(2) {
+  animation-delay: 70ms;
+}
+
+.reveal:nth-of-type(3) {
+  animation-delay: 130ms;
+}
+
+.reveal:nth-of-type(4) {
+  animation-delay: 190ms;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 760px) {
+  .featured {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-repos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar-inner,
+  .container {
+    width: min(1040px, calc(100% - 1rem));
+  }
+
+  .menu {
+    gap: 0.35rem;
+  }
+
+  .menu a {
+    font-size: 0.77rem;
+    padding: 0.3rem 0.58rem;
+  }
+
+  .panel {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+}
