@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680">
+  <rect width="900" height="680" fill="#f6f9ff"/>
+  <rect x="40" y="40" width="820" height="600" rx="16" fill="#ffffff" stroke="#dce5f1" stroke-width="2"/>
+  <rect x="75" y="80" width="290" height="34" rx="8" fill="#0ca956"/>
+  <text x="95" y="103" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">IEEE ICCCNT 2023</text>
+  <circle cx="180" cy="330" r="110" fill="#f4f7fc" stroke="#d3deeb" stroke-width="3"/>
+  <line x1="180" y1="330" x2="230" y2="280" stroke="#7b8ea4" stroke-width="10"/>
+  <line x1="180" y1="330" x2="130" y2="380" stroke="#7b8ea4" stroke-width="10"/>
+  <line x1="180" y1="330" x2="180" y2="250" stroke="#7b8ea4" stroke-width="10"/>
+  <rect x="360" y="220" width="420" height="260" rx="12" fill="#f9fbff" stroke="#d3deeb" stroke-width="3"/>
+  <polyline points="390,430 450,380 510,360 570,320 630,270 700,240 750,210" fill="none" stroke="#2f66ff" stroke-width="6"/>
+  <text x="90" y="615" font-family="Arial, sans-serif" font-size="22" fill="#4b5b6e">ML control of prosthetic arm from residual signals</text>
+</svg>
