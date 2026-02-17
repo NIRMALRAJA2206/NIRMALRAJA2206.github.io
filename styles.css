@@ -199,14 +199,53 @@ h1 {
 }
 
 .edu-list {
-  margin: 0.26rem 0 0;
-  padding-left: 1rem;
+  margin: 0.35rem 0 0;
+  display: grid;
+  gap: 0.55rem;
 }
 
-.edu-list li {
-  margin-bottom: 0.35rem;
-  font-size: 0.9rem;
-  color: var(--muted);
+.edu-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  padding: 0.58rem 0.62rem 0.58rem 0.92rem;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, #162534 76%, transparent);
+}
+
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.95rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #8ecfb2;
+}
+
+.edu-degree {
+  margin: 0;
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: #e9f0f8;
+  line-height: 1.35;
+}
+
+.edu-school {
+  margin: 0.18rem 0 0;
+  font-size: 0.82rem;
+  color: #a8bbcd;
+}
+
+.edu-date {
+  margin: 0;
+  font-size: 0.76rem;
+  color: #9eb1c4;
+  font-family: "IBM Plex Mono", monospace;
+  white-space: nowrap;
 }
 
 .meta {
@@ -358,5 +397,13 @@ h2 {
   .panel {
     border-radius: 14px;
     padding: 1rem;
+  }
+
+  .edu-item {
+    flex-direction: column;
+  }
+
+  .edu-date {
+    white-space: normal;
   }
 }
