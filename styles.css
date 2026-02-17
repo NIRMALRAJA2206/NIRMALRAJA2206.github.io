@@ -294,6 +294,70 @@ h2 {
   text-underline-offset: 0.2em;
 }
 
+.publication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.publication-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem;
+  background: color-mix(in srgb, #13202d 84%, transparent);
+}
+
+.pub-badge {
+  display: inline-block;
+  background: linear-gradient(180deg, #11bc60 0%, #0b9a4e 100%);
+  color: #effef5;
+  border-radius: 10px;
+  padding: 0.24rem 0.62rem;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pub-image-wrap {
+  margin-top: 0.68rem;
+  display: block;
+  text-decoration: none;
+  border-radius: 11px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  background: #f3f6fa;
+}
+
+.pub-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(1.04) contrast(1.03);
+  transition: transform 220ms ease;
+}
+
+.pub-image-wrap:hover .pub-image {
+  transform: scale(1.03);
+}
+
+.pub-title {
+  margin: 0.64rem 0 0;
+  line-height: 1.35;
+  font-size: 0.96rem;
+  color: #e9f0f8;
+  font-weight: 700;
+}
+
+.pub-authors {
+  margin: 0.26rem 0 0;
+  font-size: 0.84rem;
+  color: #97adc0;
+}
+
 .cards {
   display: grid;
   gap: 0.62rem;
@@ -403,5 +467,9 @@ h2 {
 
   .edu-date {
     white-space: normal;
+  }
+
+  .publication-grid {
+    grid-template-columns: 1fr;
   }
 }
