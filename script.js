@@ -11,6 +11,8 @@ const scrollBar = document.getElementById("scrollBar");
 const revealEls = document.querySelectorAll(".reveal");
 const navLinks = document.querySelectorAll(".menu a");
 const tiltCards = document.querySelectorAll("[data-tilt]");
+const finePointer = window.matchMedia("(pointer: fine)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let phraseIndex = 0;
 
@@ -22,18 +24,32 @@ function rotatePhrase() {
 
 setInterval(rotatePhrase, 2200);
 
-window.addEventListener("mousemove", (event) => {
-  if (!cursorGlow) return;
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
-});
+if (cursorGlow && finePointer && !reduceMotion) {
+  let rafId = null;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  window.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    if (rafId) return;
+
+    rafId = requestAnimationFrame(() => {
+      cursorGlow.style.left = `${mouseX}px`;
+      cursorGlow.style.top = `${mouseY}px`;
+      rafId = null;
+    });
+  });
+} else if (cursorGlow) {
+  cursorGlow.style.display = "none";
+}
 
 window.addEventListener("scroll", () => {
   const doc = document.documentElement;
   const total = doc.scrollHeight - doc.clientHeight;
   const progress = total > 0 ? (doc.scrollTop / total) * 100 : 0;
   if (scrollBar) scrollBar.style.width = `${progress}%`;
-});
+}, { passive: true });
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -65,19 +81,29 @@ document.querySelectorAll("section[id]").forEach((section) => {
   sectionObserver.observe(section);
 });
 
-tiltCards.forEach((card) => {
-  card.addEventListener("mousemove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+if (finePointer && !reduceMotion && window.innerWidth > 900) {
+  tiltCards.forEach((card) => {
+    let rafId = null;
+    let rotateX = 0;
+    let rotateY = 0;
 
-    const rotateY = ((x / rect.width) - 0.5) * 8;
-    const rotateX = ((y / rect.height) - 0.5) * -8;
+    card.addEventListener("mousemove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
 
-    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      rotateY = ((x / rect.width) - 0.5) * 6;
+      rotateX = ((y / rect.height) - 0.5) * -6;
+
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        rafId = null;
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
+    });
   });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
-  });
-});
+}

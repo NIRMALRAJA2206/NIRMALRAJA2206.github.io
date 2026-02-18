@@ -87,7 +87,7 @@ body {
 .topbar {
   position: relative;
   z-index: 30;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
   background: rgba(6, 10, 18, 0.68);
   border-bottom: 1px solid rgba(175, 196, 228, 0.16);
 }
@@ -226,8 +226,8 @@ body {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.32);
 }
 
 .hero-copy {
@@ -628,6 +628,14 @@ h1 {
   .hero-stats {
     padding: 1rem;
   }
+
+  .hero-copy,
+  .hero-stats,
+  .section,
+  .contact,
+  .topbar {
+    backdrop-filter: none;
+  }
 }
 
 @media (max-width: 760px) {
@@ -700,5 +708,11 @@ h1 {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (pointer: coarse) {
+  .cursor-glow {
+    display: none;
   }
 }
