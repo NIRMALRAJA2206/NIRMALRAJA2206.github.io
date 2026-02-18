@@ -30,9 +30,9 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
   background:
-    radial-gradient(1400px 900px at 8% -8%, rgba(65, 92, 146, 0.24) 0%, transparent 60%),
-    radial-gradient(1200px 800px at 94% 8%, rgba(83, 58, 130, 0.24) 0%, transparent 58%),
-    linear-gradient(175deg, var(--bg) 0%, #030814 58%, var(--bg-deep) 100%);
+    radial-gradient(1500px 960px at 10% -10%, rgba(88, 121, 192, 0.3) 0%, transparent 60%),
+    radial-gradient(1280px 880px at 96% 10%, rgba(104, 76, 169, 0.28) 0%, transparent 60%),
+    linear-gradient(175deg, #02050d 0%, #040b1a 56%, #010309 100%);
 }
 
 .starfield,
@@ -48,7 +48,7 @@ body {
 }
 
 .starfield-a {
-  opacity: 0.48;
+  opacity: 0.66;
   background-image:
     radial-gradient(1px 1px at 12% 18%, rgba(233, 244, 255, 0.9) 98%, transparent),
     radial-gradient(1px 1px at 24% 66%, rgba(233, 244, 255, 0.75) 98%, transparent),
@@ -61,7 +61,7 @@ body {
 
 .starfield-b {
   z-index: -2;
-  opacity: 0.34;
+  opacity: 0.48;
   background-image:
     radial-gradient(1px 1px at 6% 48%, rgba(201, 224, 255, 0.72) 98%, transparent),
     radial-gradient(1px 1px at 19% 84%, rgba(201, 224, 255, 0.62) 98%, transparent),
@@ -75,8 +75,9 @@ body {
 .nebula-layer {
   z-index: -1;
   background:
-    radial-gradient(900px 500px at 84% 32%, rgba(60, 78, 142, 0.18) 0%, transparent 62%),
-    radial-gradient(700px 420px at 22% 78%, rgba(68, 90, 160, 0.12) 0%, transparent 62%);
+    radial-gradient(980px 560px at 84% 30%, rgba(90, 116, 190, 0.24) 0%, transparent 64%),
+    radial-gradient(760px 460px at 20% 80%, rgba(80, 108, 188, 0.18) 0%, transparent 64%),
+    radial-gradient(520px 260px at 48% 22%, rgba(64, 90, 160, 0.16) 0%, transparent 66%);
 }
 
 .space-scene {
@@ -112,20 +113,20 @@ body {
 }
 
 .planet-main {
-  width: 118px;
-  height: 118px;
-  top: 11%;
-  right: 6%;
+  width: 138px;
+  height: 138px;
+  top: 10%;
+  right: 5%;
   background:
     radial-gradient(circle at 35% 28%, #b6d8ff 0%, #7399e6 38%, #2f467f 72%, #1a2747 100%);
-  opacity: 0.66;
+  opacity: 0.76;
 }
 
 .planet-secondary {
   width: 84px;
   height: 84px;
-  bottom: 12%;
-  left: 7%;
+  bottom: 11%;
+  left: 6%;
   background:
     radial-gradient(circle at 32% 26%, #ffd8be 0%, #d48f73 44%, #5b3557 78%, #2a1a36 100%);
   opacity: 0.46;
@@ -141,7 +142,7 @@ body {
   border: 1px solid rgba(144, 178, 232, 0.28);
   border-radius: 999px;
   padding: 0.2rem 0.5rem;
-  background: rgba(9, 17, 33, 0.7);
+  background: rgba(11, 20, 38, 0.82);
 }
 
 .iss-tag {
@@ -160,6 +161,29 @@ body {
   top: 42%;
   left: 8%;
   animation: drift-a 20s ease-in-out infinite reverse;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(168, 204, 255, 0.85), rgba(168, 204, 255, 0));
+  opacity: 0.46;
+}
+
+.star-1 {
+  top: 16%;
+  left: 18%;
+  transform: rotate(-18deg);
+  animation: meteor-a 8s ease-in-out infinite;
+}
+
+.star-2 {
+  top: 62%;
+  right: 14%;
+  transform: rotate(-22deg);
+  animation: meteor-b 10s ease-in-out infinite;
 }
 
 .cursor-glow {
@@ -317,7 +341,7 @@ body {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(170, 197, 238, 0.08);
 }
 
 .hero-copy {
@@ -347,7 +371,7 @@ h1 {
   border-radius: 999px;
   border: 1px solid rgba(133, 167, 224, 0.34);
   background: rgba(16, 28, 50, 0.68);
-  color: #c5d9ff;
+  color: #d7e6ff;
   font-size: 0.8rem;
 }
 
@@ -617,6 +641,32 @@ h1 {
   }
 }
 
+@keyframes meteor-a {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+  }
+  25%,
+  40% {
+    opacity: 0.52;
+    transform: translate3d(40px, 20px, 0) rotate(-18deg);
+  }
+}
+
+@keyframes meteor-b {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-22deg);
+  }
+  30%,
+  44% {
+    opacity: 0.48;
+    transform: translate3d(-44px, 26px, 0) rotate(-22deg);
+  }
+}
+
 @keyframes drift-a {
   from {
     transform: translate3d(0, 0, 0);
@@ -671,7 +721,8 @@ h1 {
 
   .planet-main,
   .orbit-ring-a,
-  .iss-tag {
+  .iss-tag,
+  .shooting-star {
     opacity: 0.35;
   }
 }
@@ -710,7 +761,8 @@ h1 {
 
   .planet,
   .orbit-ring,
-  .craft {
+  .craft,
+  .shooting-star {
     opacity: 0.2;
   }
 }
