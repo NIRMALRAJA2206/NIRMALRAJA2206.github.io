@@ -289,6 +289,13 @@ h1 {
   font-size: 0.96rem;
 }
 
+.availability {
+  margin: 0.42rem 0 0;
+  color: #b9ffd7;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 #rotatingText {
   color: #78e7c7;
   font-weight: 700;
