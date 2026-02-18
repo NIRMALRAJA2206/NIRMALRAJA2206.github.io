@@ -101,24 +101,39 @@ body {
 .contact-strip-inner {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
-  min-height: 38px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.38rem;
-  padding: 0.25rem 0;
+  gap: 0.46rem;
+  padding: 0.38rem 0;
 }
 
 .contact-strip-inner a {
   text-decoration: none;
   color: #d7e8ff;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
   border: 1px solid rgba(147, 184, 227, 0.28);
   border-radius: 999px;
-  padding: 0.22rem 0.55rem;
+  padding: 0.36rem 0.78rem;
   background: rgba(15, 29, 49, 0.55);
   transition: all 160ms ease;
+}
+
+.contact-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2cdbb2, #58aaff);
+  box-shadow: 0 4px 14px rgba(69, 171, 255, 0.24);
 }
 
 .contact-strip-inner a:hover {
