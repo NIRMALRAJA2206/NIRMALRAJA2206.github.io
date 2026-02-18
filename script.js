@@ -1,8 +1,8 @@
 const rotatingPhrases = [
   "asynchronous multi-robot planning",
-  "thermal + stereo perception fusion",
-  "sim-to-real manipulation transfer",
-  "real-time edge autonomy on embedded GPUs",
+  "thermal + stereo perception fusion for night safety",
+  "cm-level vehicle offset estimation",
+  "real-time autonomy on NVIDIA AGX Orin",
 ];
 
 const rotatingText = document.getElementById("rotatingText");

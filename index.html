@@ -23,10 +23,21 @@
     <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
     <header class="topbar">
+      <div class="contact-strip" aria-label="Quick contact links">
+        <div class="contact-strip-inner">
+          <a href="https://www.google.com/maps/place/Houghton,+MI,+USA" target="_blank" rel="noreferrer">📍 Houghton, MI, United States</a>
+          <a href="mailto:karuppia@mtu.edu">✉️ karuppia@mtu.edu</a>
+          <a href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer">🎓 Google Scholar</a>
+          <a href="tel:+19063191390">📞 +1(906)3191390</a>
+          <a href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer">💼 LinkedIn</a>
+          <a href="https://github.com/NIRMALRAJA2206" target="_blank" rel="noreferrer">💻 GitHub</a>
+        </div>
+      </div>
       <div class="topbar-inner">
         <a class="logo" href="#home">Nirmal Loganathan</a>
         <nav class="menu" aria-label="Main navigation">
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#publications">Publications</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -39,14 +50,15 @@
     <main id="home" class="container">
       <section class="hero">
         <div class="hero-copy reveal">
-          <p class="hero-kicker">PhD Robotics Researcher</p>
+          <p class="hero-kicker">Portfolio 2026</p>
           <h1>
-            Building <span class="highlight">autonomy systems</span>
-            that stay reliable in noisy, real-world conditions.
+            Nirmal Raja Loganathan
+            <span class="hero-subtitle">PhD Robotics Researcher</span>
           </h1>
+          <p class="hero-banner">Perception · Manipulation · Motion Planning · Real-Time AI Systems</p>
           <p class="summary">
-            I design production-oriented AI for robotic manipulation, autonomous driving, and field robotics.
-            Current focus: perception-guided multi-robot assembly, robust planning, and sim-to-real transfer.
+            I build autonomy pipelines from sensing to action for robotics and intelligent vehicles. My work spans
+            multi-robot manipulation, thermal-stereo perception, and low-latency deployment on embedded GPUs.
           </p>
           <p class="live-text">Now exploring: <span id="rotatingText">asynchronous multi-robot planning</span></p>
           <div class="cta-row">
@@ -58,10 +70,18 @@
         <aside class="hero-stats reveal" data-tilt>
           <h2>Research Snapshot</h2>
           <div class="stats-grid">
-            <article>
-              <p class="stat-value">9+</p>
-              <p class="stat-label">Published Works</p>
-            </article>
+            <a
+              class="stat-link"
+              href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Google Scholar profile"
+            >
+              <article>
+                <p class="stat-value">9+</p>
+                <p class="stat-label">Published Works</p>
+              </article>
+            </a>
             <article>
               <p class="stat-value">30 FPS</p>
               <p class="stat-label">Edge Inference</p>
@@ -118,6 +138,64 @@
         </div>
       </section>
 
+      <section id="experience" class="section reveal">
+        <div class="section-head">
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card" data-tilt>
+            <div class="timeline-head">
+              <h3>Research Engineer I · Automation in Manufacturing and Industrial Systems Lab</h3>
+              <p class="card-meta">Michigan Tech · Apr 2025-Aug 2025 · Houghton, MI</p>
+            </div>
+            <ul class="detail-list">
+              <li>Built a no-light detection stack combining FLIR ADK thermal, RealSense stereo, and RGB for nighttime pedestrian safety.</li>
+              <li>Trained and deployed YOLO thermal detectors that remained reliable under glare and degraded visible-light conditions.</li>
+              <li>Fused thermal detections with stereo depth using 3D frustum association for real-time tracking at ~25 FPS.</li>
+              <li>Reached under 5% distance error up to 40+ meters and improved calibration success by 80%+ using CLAHE and morphological filtering.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card" data-tilt>
+            <div class="timeline-head">
+              <h3>Software Engineer - Vehicle Perception · Advanced Power Systems Research Center</h3>
+              <p class="card-meta">Michigan Tech · Oct 2023-Aug 2025 · Houghton, MI</p>
+            </div>
+            <ul class="detail-list">
+              <li>Led perception for ARPA-E NextCar Level 4/5 workflows covering lane offset, stop-line estimation, and braking triggers.</li>
+              <li>Trained YOLOv8 lane models on 5k+ images and achieved 82% accuracy on challenging unmarked roads.</li>
+              <li>Designed a 9-point calibration method for cm-level lateral offset estimation (0.166 m average error), later published at SAE WCX 2025.</li>
+              <li>Optimized deployment to 30 FPS on NVIDIA AGX Orin and reduced latency by 32% with CUDA parallelization.</li>
+              <li>Built stop-line detection with signal recognition + stereo disparity, triggering braking 1.2 m earlier at 92% precision.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card" data-tilt>
+            <div class="timeline-head">
+              <h3>Lead AI Research Engineer · Sairam Techno Incubator Foundation</h3>
+              <p class="card-meta">Mar 2021-Aug 2023 · Chennai, India</p>
+            </div>
+            <ul class="detail-list">
+              <li>Owned perception, navigation, and safety integration for Ad Astra autonomous rover programs.</li>
+              <li>Implemented stereo SLAM and state estimation with ~4 cm RMS pose error and 2 km autonomous traverses.</li>
+              <li>Delivered terrain classification at ~14 Hz with 82% F1 and integrated CUDA Hybrid A* + MPC, dropping replanning from ~450 ms to ~50 ms.</li>
+              <li>Built astronaut detection (Faster R-CNN, 6k images) to 87 mAP@0.5 and sustained 90%+ mission uptime during field runs.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card" data-tilt>
+            <div class="timeline-head">
+              <h3>Future Ready Talent Intern · Microsoft</h3>
+              <p class="card-meta">Sep 2021-Apr 2022 · Remote</p>
+            </div>
+            <ul class="detail-list">
+              <li>Built Azure-based traffic analytics pipeline with Computer Vision API + enhanced DBSCAN for lane-wise density estimation.</li>
+              <li>Designed ingestion and visualization workflows using Azure Functions and Cosmos DB for real-time monitoring.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section id="publications" class="section reveal">
         <div class="section-head">
           <h2>Selected Publications</h2>
@@ -127,24 +205,28 @@
             <a class="pub-badge" href="https://saemobilus.sae.org/papers/machine-learning-based-lane-detection-lateral-offset-estimation-model-vehicle-following-applications-2025-01-8020" target="_blank" rel="noreferrer">SAE WCX 2025</a>
             <img class="pub-image" src="assets/publications/imagex.png?v=20260217b" alt="SAE publication figure" loading="lazy" />
             <p class="pub-title">Machine Learning-Based Lane Detection and Lateral Offset Estimation for Vehicle Following</p>
+            <p class="pub-key"><strong>Key:</strong> Centimeter-level vehicle lateral offset estimation from vision-guided lane features.</p>
           </article>
 
           <article class="publication-card" data-tilt>
             <a class="pub-badge" href="https://ieeexplore.ieee.org/abstract/document/10307980" target="_blank" rel="noreferrer">IEEE ICCCNT 2023</a>
             <img class="pub-image" src="assets/publications/icccnt-2023-paper-figure.png?v=20260217a" alt="ICCCNT publication figure" loading="lazy" />
             <p class="pub-title">Control of Prosthetic Arm via Residual Limb Signals using Machine Learning</p>
+            <p class="pub-key"><strong>Key:</strong> Residual-limb EMG intent decoding enabled stable prosthetic arm control in real time.</p>
           </article>
 
           <article class="publication-card" data-tilt>
             <a class="pub-badge" href="https://ieeexplore.ieee.org/abstract/document/10170570" target="_blank" rel="noreferrer">IEEE IConSCEPT 2023</a>
             <img class="pub-image" src="assets/publications/iconscept-2023-paper-figure.png" alt="IConSCEPT publication figure" loading="lazy" />
             <p class="pub-title">Smart Valve Control System for LPG Cylinders Using IoT</p>
+            <p class="pub-key"><strong>Key:</strong> IoT-driven safety valve actuation improved early leak response and remote shutoff reliability.</p>
           </article>
 
           <article class="publication-card" data-tilt>
             <a class="pub-badge" href="https://link.springer.com/chapter/10.1007/978-981-16-2641-8_54" target="_blank" rel="noreferrer">Springer 2021</a>
             <img class="pub-image" src="assets/publications/springer-2021-paper-figure.png" alt="Springer publication figure" loading="lazy" />
             <p class="pub-title">COVID-19 Safe Guard: A Smart Mobile Application for Pandemic Response</p>
+            <p class="pub-key"><strong>Key:</strong> Unified screening, alerts, and public-health support features in a single mobile workflow.</p>
           </article>
         </div>
       </section>
@@ -157,32 +239,56 @@
           <article class="project-card" data-tilt>
             <h3>Multi-Robot Asynchronous Planning & Vision for Cooperative Assembly</h3>
             <p class="card-meta">Doctoral Research · 2025-Present</p>
-            <p>Built dual-arm UR5e workflows with ROS 2 + MoveIt2, stereo + YOLO localization, and resilient assembly skills with recovery behaviors.</p>
+            <ul class="detail-list">
+              <li>Developing dual-arm UR5e assembly workflows for electronics/PCB subassemblies with synchronized control.</li>
+              <li>Integrated Robotiq 2F-85 grippers and force-aware end-effector for press-fit, alignment, insertion, and seating.</li>
+              <li>Built ROS 2 Humble + MoveIt2 stack with stereo + YOLO localization and robust recovery under pose/contact disturbances.</li>
+            </ul>
           </article>
           <article class="project-card" data-tilt>
             <h3>Nighttime Pedestrian Detection with Thermal + Stereo Fusion</h3>
             <p class="card-meta">AMIS Lab · 2025</p>
-            <p>Combined FLIR thermal and RealSense stereo for tracking in no-light conditions at ~25 FPS with under 5% error past 40m.</p>
+            <ul class="detail-list">
+              <li>Built multi-sensor no-light perception stack (thermal + stereo + RGB) for detection under glare and low visibility.</li>
+              <li>Fused detections with stereo depth for 3D distance tracking at ~25 FPS.</li>
+              <li>Achieved under 5% distance error up to 40+ m.</li>
+            </ul>
           </article>
           <article class="project-card" data-tilt>
             <h3>ARPA-E NextCar Autonomous Vehicle Perception</h3>
             <p class="card-meta">APSRC · 2023-2025</p>
-            <p>Led lane and stop-line perception models, improved edge-case labeling throughput, and optimized on AGX Orin to 30 FPS.</p>
+            <ul class="detail-list">
+              <li>Led lane-offset and stop-line perception for vehicle following and autonomous braking.</li>
+              <li>Scaled labeling with CLIP-based edge-case support, doubling annotation throughput.</li>
+              <li>Published cm-level offset method at SAE WCX 2025 and optimized inference to 30 FPS on AGX Orin.</li>
+            </ul>
           </article>
           <article class="project-card" data-tilt>
             <h3>Ad Astra Autonomous Rover for Mars Exploration</h3>
             <p class="card-meta">STI Foundation · 2021-2023</p>
-            <p>Developed stereo SLAM, terrain classification, astronaut detection, and CUDA Hybrid A* for fast, robust field navigation.</p>
+            <ul class="detail-list">
+              <li>Implemented stereo SLAM + state estimation for ~4 cm RMS pose error and 2 km autonomous traverses.</li>
+              <li>Delivered terrain classification with DBSCAN at ~14 Hz (82% F1) in unstructured terrain.</li>
+              <li>Integrated CUDA Hybrid A* + MPC to cut replanning latency from ~450 ms to ~50 ms.</li>
+            </ul>
           </article>
           <article class="project-card" data-tilt>
             <h3>Jarvis Vision Autonomous Drone for Flood Rescue</h3>
             <p class="card-meta">STI Foundation · 2021-2023</p>
-            <p>Built YOLOv5 detection, 3D localization, and depth estimation across 90k+ drone frames with real-time ROS 2 acceleration.</p>
+            <ul class="detail-list">
+              <li>Built YOLOv5-based person detection + tracking with RGB-D localization on 90k+ drone frames.</li>
+              <li>Estimated flood-water depth with cm-level RMSE at ~20 FPS.</li>
+              <li>Integrated ArUco-based precision landing with repeatable centimeter-level touchdown accuracy.</li>
+            </ul>
           </article>
           <article class="project-card" data-tilt>
             <h3>Human Walking Intent Prediction for Spot</h3>
             <p class="card-meta">Independent · 2024</p>
-            <p>Designed collision avoidance with Detectron2 + MediaPipe and centimeter-level distance estimation at real-time rates.</p>
+            <ul class="detail-list">
+              <li>Built real-time collision avoidance using Detectron2 instance segmentation + MediaPipe pose signals.</li>
+              <li>Designed 8-point calibration for cm-level distance estimation and deployed on Spot CORE I/O at 30 FPS.</li>
+              <li>Integrated LiDAR and stereo streams for safer navigation in dynamic scenes.</li>
+            </ul>
           </article>
         </div>
       </section>
