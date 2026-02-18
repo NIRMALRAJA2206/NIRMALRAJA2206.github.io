@@ -146,21 +146,33 @@ body {
 }
 
 .iss-tag {
-  top: 28%;
-  right: 18%;
+  top: 27%;
+  right: 17%;
   animation: drift-a 14s ease-in-out infinite;
 }
 
-.sat-a {
-  top: 66%;
-  left: 18%;
+.moon-tag {
+  top: 63%;
+  left: 17%;
   animation: drift-b 18s ease-in-out infinite;
 }
 
-.sat-b {
-  top: 42%;
+.mars-tag {
+  top: 43%;
   left: 8%;
   animation: drift-a 20s ease-in-out infinite reverse;
+}
+
+.earth-tag {
+  top: 18%;
+  left: 20%;
+  animation: drift-b 16s ease-in-out infinite;
+}
+
+.jupiter-tag {
+  bottom: 14%;
+  right: 10%;
+  animation: drift-a 19s ease-in-out infinite;
 }
 
 .shooting-star {
