@@ -729,7 +729,7 @@ h1,
 }
 
 .about-social-link[aria-label="LinkedIn"] {
-  color: #7fc2ff;
+  color: #0a66c2;
 }
 
 .about-social-link[aria-label="GitHub"] {
@@ -745,7 +745,7 @@ h1,
 }
 
 .contact-links a[href*="linkedin.com"] .icon {
-  color: #7fc2ff;
+  color: #0a66c2;
 }
 
 .contact-links a[href^="mailto:"] .icon {
