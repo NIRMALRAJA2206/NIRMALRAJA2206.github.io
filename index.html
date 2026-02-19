@@ -14,20 +14,42 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-location" viewBox="0 0 16 16">
+        <path d="M8 16s6-5.69 6-10A6 6 0 1 0 2 6c0 4.31 6 10 6 10m0-7.5A2.5 2.5 0 1 1 8 3a2.5 2.5 0 0 1 0 5.5"/>
+      </symbol>
+      <symbol id="icon-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-.5a.5.5 0 0 0-.5.5v.22l6.5 3.9 6.5-3.9V4a.5.5 0 0 0-.5-.5zm12.5 2.47-4.9 2.94 4.9 2.94zm-.78 4.22-5-3-5 3a.5.5 0 0 1-.52 0l-1.7-1.02V12a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5v-1.89l-1.7 1.02a.5.5 0 0 1-.52 0m-12-1.28 4.9-2.94-4.9-2.94z"/>
+      </symbol>
+      <symbol id="icon-scholar" viewBox="0 0 16 16">
+        <path d="m8.2 1.2 7 3.2-7 3.2-7-3.2z"/>
+        <path d="M3 7.3v2.8l5 2.3 5-2.3V7.3l-5 2.3z"/>
+        <path d="M1.2 7.8h1.1v3.3H1.2z"/>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.15C0 .52.52 0 1.15 0h13.7C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.15 1.15H1.15A1.15 1.15 0 0 1 0 14.85zM4.75 13.25V6.15H2.4v7.1zM3.58 5.18c.82 0 1.33-.54 1.33-1.22-.01-.69-.51-1.22-1.32-1.22s-1.33.53-1.33 1.22.51 1.22 1.31 1.22m9.67 8.07h-2.35V9.44c0-.96-.34-1.62-1.2-1.62-.65 0-1.04.43-1.2.86-.06.15-.08.36-.08.57v4h-2.35s.03-6.48 0-7.1h2.35v1c.31-.48.86-1.16 2.1-1.16 1.53 0 2.68 1 2.68 3.15z"/>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 0 0-2.53 15.6c.4.08.55-.18.55-.38v-1.34c-2.24.49-2.71-1.08-2.71-1.08-.36-.94-.9-1.19-.9-1.19-.73-.5.06-.5.06-.5.82.05 1.25.85 1.25.85.71 1.24 1.9.88 2.37.68.07-.53.28-.89.5-1.1-1.78-.2-3.65-.9-3.65-4.08 0-.9.32-1.64.84-2.21-.08-.21-.36-1.04.08-2.17 0 0 .7-.22 2.28.84a7.9 7.9 0 0 1 4.16 0c1.58-1.06 2.28-.84 2.28-.84.44 1.13.16 1.96.08 2.17.52.57.84 1.31.84 2.21 0 3.18-1.87 3.88-3.66 4.08.28.24.54.73.54 1.48v2.2c0 .2.14.46.55.38A8 8 0 0 0 8 0"/>
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h.5A2.5 2.5 0 0 1 16 3.5v10A2.5 2.5 0 0 1 13.5 16h-11A2.5 2.5 0 0 1 0 13.5v-10A2.5 2.5 0 0 1 2.5 1H3V.5a.5.5 0 0 1 .5-.5M1 6v7.5c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5V6zm10.35 2.15a.5.5 0 0 1 0 .7l-3.4 3.4a.5.5 0 0 1-.7 0l-1.6-1.6a.5.5 0 1 1 .7-.7l1.25 1.24 3.05-3.04a.5.5 0 0 1 .7 0"/>
+      </symbol>
+    </svg>
 
     <header class="topbar">
       <div class="contact-strip" aria-label="Quick contact links">
         <div class="contact-strip-inner">
-          <a href="https://www.google.com/maps/place/Houghton,+MI,+USA" target="_blank" rel="noreferrer"><span class="contact-icon">📍</span>Houghton, MI, United States</a>
-          <a href="mailto:karuppia@mtu.edu"><span class="contact-icon">✉️</span>karuppia@mtu.edu</a>
-          <a href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer"><span class="contact-icon">🎓</span>Google Scholar</a>
-          <a href="tel:+19063191390"><span class="contact-icon">📞</span>+1(906)3191390</a>
-          <a href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer"><span class="contact-icon">💼</span>LinkedIn</a>
-          <a href="https://github.com/NIRMALRAJA2206" target="_blank" rel="noreferrer"><span class="contact-icon">💻</span>GitHub</a>
+          <a href="https://www.google.com/maps/place/Houghton,+MI,+USA" target="_blank" rel="noreferrer"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-location"></use></svg></span>Houghton, MI, United States</a>
+          <a href="mailto:karuppia@mtu.edu"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-envelope"></use></svg></span>karuppia@mtu.edu</a>
+          <a href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-scholar"></use></svg></span>Google Scholar</a>
+          <a href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg></span>LinkedIn</a>
+          <a href="https://github.com/NIRMALRAJA2206" target="_blank" rel="noreferrer"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></span>GitHub</a>
+          <a href="https://calendar.app.google/TuUmt3SJuxXfDmZA7" target="_blank" rel="noreferrer"><span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg></span>Book 30-min Call</a>
         </div>
       </div>
       <div class="topbar-inner">
@@ -47,6 +69,7 @@
     <main id="home" class="container">
       <section class="hero">
         <div class="hero-copy reveal">
+          <p class="intro-kicker">Hello, I'm Nirmal<span aria-hidden="true">👋</span></p>
           <h1>
             Nirmal Loganathan
             <span class="hero-subtitle">PhD Robotics Researcher</span>
@@ -61,6 +84,13 @@
           <div class="cta-row">
             <a class="btn primary" href="#projects">Explore Work</a>
             <a class="btn ghost" href="https://github.com/NIRMALRAJA2206" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://calendar.app.google/TuUmt3SJuxXfDmZA7" target="_blank" rel="noreferrer">Schedule 30-min Call</a>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a class="social-icon-link" href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+            <a class="social-icon-link" href="https://github.com/NIRMALRAJA2206" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
+            <a class="social-icon-link" href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="#icon-scholar"></use></svg></a>
+            <a class="social-icon-link" href="https://calendar.app.google/TuUmt3SJuxXfDmZA7" target="_blank" rel="noreferrer" aria-label="Schedule a call"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg></a>
           </div>
         </div>
 
@@ -313,11 +343,12 @@
 
       <section id="contact" class="section contact reveal">
         <h2>Let's Build Something Real</h2>
-        <p>Open to robotics perception, autonomy, and applied AI internship opportunities for Summer 2026.</p>
+        <p>Open to robotics perception, autonomy, and applied AI internship opportunities for Summer 2026. I am active on LinkedIn, and you can schedule a 30-minute call with me anytime.</p>
         <div class="contact-links">
-          <a href="mailto:karuppia@mtu.edu">karuppia@mtu.edu</a>
-          <a href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://calendar.app.google/TuUmt3SJuxXfDmZA7" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"></use></svg>Schedule 30-Minute Call</a>
+          <a href="https://linkedin.com/in/nl2206" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>LinkedIn (Active)</a>
+          <a href="mailto:karuppia@mtu.edu"><svg class="icon" aria-hidden="true"><use href="#icon-envelope"></use></svg>karuppia@mtu.edu</a>
+          <a href="https://scholar.google.com/citations?user=lCGSU10AAAAJ&hl=en" target="_blank" rel="noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-scholar"></use></svg>Google Scholar</a>
         </div>
       </section>
     </main>
