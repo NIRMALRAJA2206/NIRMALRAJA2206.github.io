@@ -674,10 +674,28 @@ h1 {
   background: rgba(31, 43, 62, 0.95);
 }
 
-/* Final contrast pass: white text + polished logo colors */
+/* Final theme pass: plain black + red */
 :root {
+  --bg: #060607;
+  --bg-soft: #0a0a0c;
+  --paper: #111114;
   --ink: #ffffff;
-  --muted: #e6eeff;
+  --muted: #f1f1f4;
+  --line: #30242a;
+  --accent: #c1121f;
+  --accent-soft: #2a1318;
+}
+
+body {
+  background:
+    radial-gradient(1100px 700px at 10% -10%, rgba(193, 18, 31, 0.16) 0%, transparent 56%),
+    radial-gradient(1100px 700px at 110% 10%, rgba(193, 18, 31, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, #09090b 0%, #050506 100%);
+}
+
+.topbar {
+  background: rgba(8, 8, 10, 0.9);
+  border-bottom-color: #2f2429;
 }
 
 .logo,
@@ -703,61 +721,73 @@ h1,
 .card-meta,
 .education li,
 .education span,
-.about-location {
-  color: #ffffff;
-}
-
-.menu a {
-  color: #dbe8ff;
-}
-
+.about-location,
+.menu a,
 .menu a:hover,
 .menu a.active {
   color: #ffffff;
 }
 
+.hero-copy,
+.hero-stats,
+.section,
+.contact,
+.stats-grid article,
+.glass-card,
+.timeline-card,
+.publication-card,
+.project-card,
+.about-connect {
+  background: rgba(14, 14, 17, 0.95);
+  border-color: #3b2a31;
+}
+
 .hero-banner {
-  color: #eaf2ff;
+  color: #ffdfe3;
+  border-color: #7d2d38;
+  background: rgba(44, 18, 24, 0.88);
 }
 
-#rotatingText {
-  color: #9fd1ff;
+#rotatingText,
+.card-meta {
+  color: #ff5668;
 }
 
-.about-location .icon {
-  color: #ffb7c9;
+.btn.primary,
+.resume-btn {
+  color: #ffffff;
+  border-color: #d62f40;
+  background: linear-gradient(135deg, #b0101e, #de3246);
 }
 
-.about-social-link[aria-label="LinkedIn"] {
-  color: #0a66c2;
+.btn.ghost,
+.contact-links a,
+.about-social-link {
+  color: #ffffff;
+  border-color: #5a353d;
+  background: rgba(23, 15, 18, 0.9);
 }
 
-.about-social-link[aria-label="GitHub"] {
-  color: #f0f5ff;
+.btn.ghost:hover,
+.contact-links a:hover,
+.about-social-link:hover,
+.menu a:hover,
+.menu a.active {
+  border-color: #d83042;
+  background: rgba(39, 18, 24, 0.95);
 }
 
-.about-social-link[aria-label="Google Scholar"] {
-  color: #aebfff;
+.about-location .icon,
+.about-social-link .icon,
+.contact-links a .icon {
+  color: #ff4a5f;
 }
 
-.about-social-link[aria-label="Schedule a call"] {
-  color: #ffb9cb;
-}
-
-.contact-links a[href*="linkedin.com"] .icon {
-  color: #0a66c2;
-}
-
-.contact-links a[href^="mailto:"] .icon {
-  color: #f0f5ff;
-}
-
-.contact-links a[href*="calendar.app.google"] .icon {
-  color: #ffb9cb;
-}
-
+.contact-links a[href*="linkedin.com"] .icon,
+.contact-links a[href^="mailto:"] .icon,
+.contact-links a[href*="calendar.app.google"] .icon,
 .contact-links a[href*="scholar.google.com"] .icon {
-  color: #aebfff;
+  color: #ff4a5f;
 }
 
 @media (max-width: 1024px) {
